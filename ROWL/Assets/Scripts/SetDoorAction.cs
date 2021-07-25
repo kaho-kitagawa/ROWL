@@ -7,15 +7,30 @@ public class SetDoorAction : MonoBehaviour
     public bool isOpen = false;
     public Animator animator;
 
+    public bool IsGirlOnly;
+
+    public string OnlyTag = string.Empty;
+
+    private void Start()
+    {
+        if (IsGirlOnly == true)
+        {
+            OnlyTag = "GirlCharacter";
+        }
+        else
+        {
+            OnlyTag = "BoyCharacter";
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player")
+        if (other.tag != OnlyTag)
         {
             return;
         }
         if (!isOpen)
         {
-            this.transform.GetChild(0).localEulerAngles = new Vector3(0, -90, 0);
             isOpen = true;
             animator.SetBool("IsOpen", isOpen);
         }
@@ -23,13 +38,12 @@ public class SetDoorAction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag != "Player")
+        if (other.tag != OnlyTag)
         {
             return;
         }
         if (isOpen)
         {
-            this.transform.GetChild(0).localEulerAngles = new Vector3(0, 0, 0);
             isOpen = false;
             animator.SetBool("IsOpen", isOpen);
         }
