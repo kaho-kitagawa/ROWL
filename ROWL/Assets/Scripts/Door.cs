@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public bool IsGirlOnly = true;
+
     void Start()
     {
         var CapsulCollider = this.transform.parent.gameObject.AddComponent<CapsuleCollider>();
@@ -11,6 +13,7 @@ public class Door : MonoBehaviour
         CapsulCollider.height = 1f;
         CapsulCollider.isTrigger = true;
         var doorAction = CapsulCollider.gameObject.AddComponent<SetDoorAction>();
+        doorAction.IsGirlOnly = IsGirlOnly;
         var Animator = GetComponent<Animator>();
         doorAction.animator = Animator;
     }
