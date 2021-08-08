@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public bool IsGirlOnly = true;
+    public SetDoorAction.DoorOpenRestriction DoorOpenRestriction;
 
     void Start()
     {
@@ -13,7 +14,8 @@ public class Door : MonoBehaviour
         CapsulCollider.height = 1f;
         CapsulCollider.isTrigger = true;
         var doorAction = CapsulCollider.gameObject.AddComponent<SetDoorAction>();
-        doorAction.IsGirlOnly = IsGirlOnly;
+        doorAction.ThisDoorOpenRestriction = DoorOpenRestriction;
+    
         var Animator = GetComponent<Animator>();
         doorAction.animator = Animator;
     }

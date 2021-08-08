@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 886138227bf6615429ca9c50ec1c190b
+  m_SerializeEntries:
+  - m_GUID: ef4cff1d9ce4a5b4db0de95e94c3cd2f
+    m_Address: Assets/Sound/BGM/VSQSE_0666_forest.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9685af357d810e347b6146ef321c0fdf
+    m_Address: Assets/Sound/SE/NotOperDoor.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 646e5527d2c0ef643831a9a5fed35093
+    m_Address: Assets/Sound/SE/OpenDoor.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 04905d0a3248e4b459f4a9132a3de26c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7263e5a517365dc469fdc694dcb849a0, type: 2}
+    - {fileID: 11400000, guid: c2291c8d7291f364981f881f956dc056, type: 2}
